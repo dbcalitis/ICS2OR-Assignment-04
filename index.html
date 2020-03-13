@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="Javascript">
+    <meta name="keywords" content="Javascript, HTML, Crossover">
+    <meta name="author" content="Daria Bernice Calitis">
+    <meta name="viewport"content="width=device-width, initial-scale+1.0">
+    <title>Assignment 4</title>
+  </head>
+  <body>
+    <h1>Circumference and Area of a Circle</h1>
+    <p>Enter the diameter or radius of the circle.</p>
+    <img src="./images/Circle.png"></img>
+    <p id="answer"></p>
+    <div>
+      <input id="diameter" placeholder="Diameter">
+      <button id="dbutton">Calculate with Diameter</button>
+    </div>
+    <div>
+      <input id="radius" placeholder="Radius">
+      <button id="rbutton">Calculate with Radius</button>
+    </div>
+    <script>
+      "use strict";
+      let diameter;
+      let radius;
+      let area;
+      let circumference;
+      let pi;
+      pi = Math.PI
+      radius = document.getElementById("radius").value
+
+      document.getElementById("dbutton").addEventListener("click", C_and_A_circle_D)
+      document.getElementById("rbutton").addEventListener("click", C_and_A_circle_R)
+      function C_and_A_circle_D() {
+        diameter = document.getElementById("diameter").value
+        circumference = Math.round(pi * diameter);
+        radius = diameter / 2;
+        area =  Math.round(pi * radius ** 2);
+        document.getElementById("answer").textContent = "The circumference is approx. " 
+        + circumference + " and the area is approx. " + area + " (Given diameter = " + diameter + " )";
+      }
+
+      function C_and_A_circle_R() {
+        radius = document.getElementById("radius").value
+        circumference = Math.round(2 * pi * radius);
+        area =  Math.round(pi * radius ** 2);
+        document.getElementById("answer").textContent = "The circumference is approx. " 
+        + circumference + " and the area is approx. " + area + " (Given radius = " + radius + " )";
+      }
+    </script>
+  </body>
+</html>
