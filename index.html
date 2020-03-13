@@ -12,7 +12,7 @@
   <body>
     <h1>Circumference and Area of a Circle</h1>
     <p>Enter the diameter or radius of the circle.</p>
-    <img src="./images/Circle.png"></img>
+    <img src="./images/Circle.png">
     <p id="answer"></p>
     <div>
       <input id="diameter" placeholder="Diameter">
@@ -39,7 +39,7 @@
         circumference = Math.round(pi * diameter);
         radius = diameter / 2;
         area =  Math.round(pi * radius ** 2);
-        document.getElementById("answer").textContent = "The circumference is approx. " 
+        document.getElementById("answer").textContent = "The circumference is approx. "
         + circumference + " and the area is approx. " + area + " (Given diameter = " + diameter + " )";
       }
 
@@ -47,7 +47,7 @@
         radius = document.getElementById("radius").value
         circumference = Math.round(2 * pi * radius);
         area =  Math.round(pi * radius ** 2);
-        document.getElementById("answer").textContent = "The circumference is approx. " 
+        document.getElementById("answer").textContent = "The circumference is approx. "
         + circumference + " and the area is approx. " + area + " (Given radius = " + radius + " )";
       }
     </script>
