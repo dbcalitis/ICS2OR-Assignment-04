@@ -30,12 +30,11 @@
       let circumference;
       let pi;
       pi = Math.PI
-      radius = document.getElementById("radius").value
 
       document.getElementById("dbutton").addEventListener("click", C_and_A_circle_D)
       document.getElementById("rbutton").addEventListener("click", C_and_A_circle_R)
       function C_and_A_circle_D() {
-        diameter = document.getElementById("diameter").value
+        diameter = parseInt(document.getElementById("diameter").value)
         circumference = Math.round(pi * diameter);
         radius = diameter / 2;
         area =  Math.round(pi * radius ** 2);
@@ -44,7 +43,7 @@
       }
 
       function C_and_A_circle_R() {
-        radius = document.getElementById("radius").value
+        radius = parseInt(document.getElementById("radius").value)
         circumference = Math.round(2 * pi * radius);
         area =  Math.round(pi * radius ** 2);
         document.getElementById("answer").textContent = "The circumference is approx. "
