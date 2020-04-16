@@ -31,8 +31,11 @@
       let pi;
       pi = Math.PI
 
-      document.getElementById("dbutton").addEventListener("click", C_and_A_circle_D)
-      document.getElementById("rbutton").addEventListener("click", C_and_A_circle_R)
+      document.getElementById("dbutton").addEventListener("click", C_and_A_circle_D);
+      document.getElementById("rbutton").addEventListener("click", C_and_A_circle_R);
+
+      // C_and_A_circle stands for Circumference and Area of the circle
+      // This one calculates the Circumference and Area with the diameter
       function C_and_A_circle_D() {
         diameter = parseInt(document.getElementById("diameter").value)
         circumference = Math.round(pi * diameter);
@@ -42,6 +45,7 @@
         + circumference + " and the area is approx. " + area + " (Given diameter = " + diameter + " )";
       }
 
+      //This one calculates the Circumference and Area with the radius
       function C_and_A_circle_R() {
         radius = parseInt(document.getElementById("radius").value)
         circumference = Math.round(2 * pi * radius);
